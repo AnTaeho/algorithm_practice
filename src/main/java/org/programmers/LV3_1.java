@@ -11,43 +11,36 @@ public class LV3_1 {
     }
 
     public static int[] solution(String[] genres, int[] plays) {
-        int[] answer = {};
-        int length = genres.length;
-        Map<String, Integer> genre_play = new HashMap<>();
-        for(int i = 0; i < length; i++){
-            genre_play.put(genres[i], genre_play.getOrDefault(genres[i], 0) + plays[i]);
+        ArrayList<Integer> answer = new ArrayList<>();
+        HashMap<String, Integer> num = new HashMap<>();
+        HashMap<String, HashMap<Integer, Integer>> music = new HashMap<>();
+        for(int i = 0; i < plays.length; i++) {
+            if(!num.containsKey(genres[i])) {
+                HashMap<Integer, Integer> map = new HashMap<>();
+                map.put(i, plays[i]);
+                music.put(genres[i], map);
+                num.put(genres[i], plays[i]);
+            } else {
+                music.get(genres[i]).put(i, plays[i]);
+                num.put(genres[i], num.get(genres[i]) + plays[i]);
+            }
         }
-        List<Music> musics = new ArrayList<>();
-        for (int j = 0; j < length; j++) {
-            musics.add(new Music(genres[j], j, plays[j]));
+
+        List<String> keySet = new ArrayList(num.keySet());
+        Collections.sort(keySet, (s1, s2) -> num.get(s2) - (num.get(s1)));
+
+        for(String key : keySet) {
+            HashMap<Integer, Integer> map = music.get(key);
+            List<Integer> genre_key = new ArrayList(map.keySet());
+
+            Collections.sort(genre_key, (s1, s2) -> map.get(s2) - (map.get(s1)));
+
+            answer.add(genre_key.get(0));
+            if(genre_key.size() > 1)
+                answer.add(genre_key.get(1));
         }
 
-        List<Map.Entry<String, Integer>> entries = genre_play.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .collect(Collectors.toList());
-
-
-        return answer;
+        return answer.stream().mapToInt(i -> i).toArray();
     }
 
-    static class Music {
-        String genre;
-        int number;
-        int playNumber;
-
-        public Music(String genre, int number, int playNumber) {
-            this.genre = genre;
-            this.number = number;
-            this.playNumber = playNumber;
-        }
-
-        @Override
-        public String toString() {
-            return "Music{" +
-                    "genre='" + genre + '\'' +
-                    ", number=" + number +
-                    ", playNumber=" + playNumber +
-                    '}';
-        }
-    }
 }
