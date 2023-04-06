@@ -1,4 +1,4 @@
-package org.programmers;
+package org.programmers.lv1;
 
 import java.util.HashSet;
 import java.util.Set;

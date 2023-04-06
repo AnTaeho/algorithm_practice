@@ -1,4 +1,4 @@
-package org.programmers;
+package org.programmers.lv2;
 
 public class LV2_6 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.programmers;
+package org.programmers.lv1;
 
 import java.util.ArrayList;
 import java.util.List;
