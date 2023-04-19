@@ -6,9 +6,9 @@ public class LV1_41 {
     }
 
     public long solution(int price, int money, int count) {
-        int total = 0;
+        long total = 0;
         for (int i = 0; i < count; i++) {
-            total += price*(i+1);
+            total += (long) price *(i+1);
         }
         return Math.max(total - money, 0);
     }
