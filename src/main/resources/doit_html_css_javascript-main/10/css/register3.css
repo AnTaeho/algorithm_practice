@@ -5,7 +5,7 @@
 
 body {
 	background: #ccc;
-	padding: 20px;	
+	padding: 20px;
 }
 
 #signup {
@@ -13,20 +13,20 @@ body {
 	border:1px solid #222;
 	border-radius: 5px;
 	padding: 20px;
-	width: 400px;	
+	width: 400px;
 	margin:30px auto;
 }
-		
+
 #signup fieldset {
 	border: 1px solid #ccc;
 	margin-bottom: 30px;
 }
-		
+
 #signup legend {
 	font-size: 16px;
 	font-weight: bold;
 	padding-left:5px;
-	padding-bottom: 10px;	
+	padding-bottom: 10px;
 }
 
 #signup ul li {
@@ -35,8 +35,8 @@ body {
 	padding: 5px 10px;
 	margin-bottom: 2px;
 }
-			
-#signup button {	
+
+#signup button {
 	border: 1px solid #222;
 	border-radius: 20px;
 	display: block;
@@ -58,7 +58,7 @@ body {
 	font-size: 13px;  /* 텍스트 필드 안의 글자 크기 지정 */
 	padding: 5px;  /* 텍스트 필드와 내용 사이의 패딩 지정 */
 	width: 200px;  /* 텍스트 필드 너비 지정 */
-}					
+}
 
 #signup input[required] {  /* 필수 입력 필드의 스타일 */
 	border:1px red solid;
@@ -73,7 +73,7 @@ body {
   margin-bottom:0;  /* 아래쪽 마진 없앰 */
 }
 
-/* #signup button:hover {  /* #singup 하위에 있는 버튼에 마우스 올렸을 때 스타일 */
-  background-color:#222;  /* 배경색 - 검정 계열색 */
-  color:#fff;  /* 글자색 - 흰색 */
-} */
+/*!* #signup button:hover {  !* #singup 하위에 있는 버튼에 마우스 올렸을 때 스타일 *!*/
+/*  background-color: #222;  !* 배경색 - 검정 계열색 *!*/
+/*  color:#fff;  !* 글자색 - 흰색 *!*/
+/*} *!*/

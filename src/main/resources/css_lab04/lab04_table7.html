@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>표 스타일</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      font-size: 0.75em;
+      color: #333;
+    }
+    .tbl-ex {
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      border-left: 0; /* 왼쪽 border를 0으로 설정 */
+      border-right: 0; /
+      border: 1px solid #333; /* tbl-ex 클래스에 1px 굵기의 #333 색상의 solid 타입의 border 추가 */
+    }
+
+    table {
+      caption-side: bottom;
+      border-collapse: collapse; /* table 태그 안의 border-collapse 속성을 추가하여 셀 경계를 겹치도록 설정 */
+    }
+
+    th {
+      background-color: #999;
+      font-size: 1.1em;
+      color: #fff;
+    }
+
+    td, th {
+      border: 1px solid #333; /* td, th 태그에 1px 굵기의 #333 색상의 solid 타입의 border 추가 */
+      padding: 8px;
+      text-align: center;
+      border-left: 0;
+      border-right: 0; /
+    }
+  </style>
+</head>
+<body>
+<table class="tbl-ex">
+  <thead>
+  <tr>
+    <th>형식</th>
+    <th>선택자 이름</th>
+    <th>스타일 적용 요소</th>
+    <th>호환성</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>a</td>
+    <td>HTML</td>
+    <td>모든 HTML에 적용</td>
+    <td>IE4, FF1, Safari 1, 크롬 1, 오페라 3.5, CSS1</td>
+  </tr>
+  <tr>
+    <td>.classname</td>
+    <td>클래스</td>
+    <td>클래스로 정의해 준 HTML 태그</td>
+    <td>IE4, FF1, Safari 1, 크롬 1, 오페라 3.5, CSS1</td>
+  </tr>
+  <tr>
+    <td>a.classname</td>
+    <td>종속 클래스</td>
+    <td>특정 HTML 태그에 종속된 클래스</td>
+    <td>IE4, FF1, Safari 1, 크롬 1, 오페라 3.5, CSS1</td>
+  </tr>
+  <tr>
+    <td>#idname</td>
+    <td>아이디</td>
+    <td>아이디로 정의해준 HTML 태그</td>
+    <td>IE4, FF1, Safari 1, 크롬 1, 오페라 3.5, CSS1</td>
+  </tr>
+  <tr>
+    <td>a#idname</td>
+    <td>종속 아이디</td>
+    <td>특정 HTML 태그에 종속된 아이디</td>
+    <td>IE4, FF1, Safari 1, 크롬 1, 오페라 3.5, CSS1</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>전체 선택</td>
+    <td>모든 HTML 태그에 적용</td>
+    <td>IE4, FF1, Safari 1, 크롬 1, 오페라 3.5, CSS1</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
